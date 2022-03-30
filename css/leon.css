@@ -1,0 +1,130 @@
+/* Start Global Rules*/
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+
+  font-family: "Raleway", sans-serif;
+
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --mainColor: #10cab7;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small Screens */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium Screens */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large Screens */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules*/
+
+/* Start Header */
+.header {
+  padding: 15px;
+  background-color: #333;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header img {
+  width: 60px;
+}
+
+.header i {
+  color: var(--mainColor);
+  font-size: 25px;
+  transition-duration: 0.5s;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+}
+
+.header i:hover {
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
+
+.header .links {
+  position: relative;
+}
+
+.header .links:hover ul{
+display: block;
+}
+
+.header ul {
+  position: absolute;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: calc(100% + 15px);
+  min-width: 200px;
+  display: none;
+}
+
+.header ul::before {
+  content: "";
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #f6f6f6 transparent;
+  right: 0;
+  top: -20px;
+}
+
+.header ul li {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  transition-duration: 0.3s;
+}
+
+.header ul li:hover {
+  padding-left: 25px;
+}
+
+.header ul li a {
+  color: #333;
+}
+.header ul li a:hover {
+  color: var(--mainColor);
+}
+/* End Header */
