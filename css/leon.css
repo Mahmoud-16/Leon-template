@@ -74,20 +74,8 @@ a {
   -o-transform: rotate(-90deg);
 }
 
-.header i:hover {
-  transform: rotate(-180deg);
-  -webkit-transform: rotate(-180deg);
-  -moz-transform: rotate(-180deg);
-  -ms-transform: rotate(-180deg);
-  -o-transform: rotate(-180deg);
-}
-
 .header .links {
   position: relative;
-}
-
-.header .links:hover ul {
-  display: block;
 }
 
 .header ul {
