@@ -12,6 +12,9 @@ body {
 
 :root {
   --mainColor: #10cab7;
+  --sectionPadding: 60px;
+  --sectionBackground: #f6f6f6;
+  --paragraphColor: #777;
 }
 
 ul {
@@ -151,3 +154,34 @@ a {
 }
 
 /* End Landing */
+/* Start Features */
+.features .container{
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 20px;
+padding-top: var(--sectionPadding);
+padding-bottom: var(--sectionPadding);
+}
+
+.features .container .feat {
+  text-align: center;
+  padding: 20px;
+}
+
+.features .container .feat i {
+  font-size: 50px;
+  color: var(--mainColor);
+}
+
+.features .container .feat h3 {
+  font-weight: 800;
+  margin: 30px 0;
+}
+
+.features .container .feat p {
+  color: var(--paragraphColor);
+  line-height: 1.8;
+  font-size: 17px;
+}
+
+/* End Features */
