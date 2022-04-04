@@ -51,6 +51,31 @@ a {
 }
 /* End Global Rules*/
 
+/*Start Section Heading Component */
+.section-heading {
+  color: #ebeced;
+  font-size: 100px;
+  margin: 0;
+  letter-spacing: -3px;
+  font-weight: 800;
+  text-align: center;
+}
+.section-heading + p {
+  text-align: center;
+  font-size: 20px;
+  color: var(--paragraphColor);
+  margin: -30px 0 0;
+}
+@media (max-width: 767px) {
+  .section-heading {
+    font-size: 60px;
+  }
+  .section-heading + p {
+    margin-top: -20px;
+  }
+}
+/*Start Section Heading Component */
+
 /* Start Header */
 .header {
   padding: 15px;
@@ -155,12 +180,15 @@ a {
 
 /* End Landing */
 /* Start Features */
-.features .container{
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-gap: 20px;
-padding-top: var(--sectionPadding);
-padding-bottom: var(--sectionPadding);
+.features {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  background-color: var(--sectionBackground);
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .features .container .feat {
@@ -185,3 +213,83 @@ padding-bottom: var(--sectionPadding);
 }
 
 /* End Features */
+/* Start Services */
+.services {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+@media (max-width: 767px) {
+  .services {
+    padding-bottom: 0px;
+  }
+}
+
+.services .services-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 100px;
+}
+@media (max-width: 767px) {
+  .services .services-content {
+    margin-top: 50px;
+  }
+}
+
+.services .services-content .srv {
+  display: flex;
+  margin-bottom: 30px;
+}
+@media (max-width: 767px) {
+  .services .services-content .srv {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.services .services-content .srv i {
+  font-size: 30px;
+  color: var(--mainColor);
+  flex-basis: 60px;
+}
+
+.services .services-content .srv .text {
+  flex: 1;
+}
+
+.services .services-content .srv .text h3 {
+  margin: 0 0 10px;
+  font-weight: 800;
+}
+
+.services .services-content .srv .text p {
+  color: var(--paragraphColor);
+  line-height: 1.5;
+}
+
+.services .services-content .image img {
+  width: 260px;
+}
+
+.services .services-content .image {
+  text-align: center;
+  position: relative;
+}
+
+.services .services-content .image::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: calc(100% + 100px);
+  background-color: #2c4755;
+  right: 0;
+  top: -50px;
+  z-index: -1;
+}
+
+@media (max-width: 1199px) {
+  .services .services-content .image {
+    display: none;
+  }
+}
+/* End Services */
