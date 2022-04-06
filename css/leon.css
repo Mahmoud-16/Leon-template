@@ -351,3 +351,99 @@ a {
   line-height: 1.6;
 }
 /* End Portfolio */
+/* Start About */
+.about {
+  padding-top: var(--sectionPadding);
+  padding-bottom: calc(var(--sectionPadding) + 60px);
+}
+
+@media (max-width: 991px) {
+  .about {
+    padding-bottom: 30px;
+  }
+}
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+@media (max-width: 991px) {
+  .about .about-content {
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+
+.about .about-content .image {
+  width: 250px;
+  height: 375px;
+  position: relative;
+}
+
+.about .about-content .image img {
+  max-width: 100%;
+}
+
+@media (max-width: 991px) {
+  .about .about-content .image {
+    margin: 0 auto 50px;
+  }
+}
+
+.about .about-content .image::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: calc(100% + 100px);
+  background-color: #ebeced;
+  top: -50px;
+  left: -20px;
+  z-index: -1;
+}
+
+.about .about-content .image::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  border-bottom: 79px solid var(--mainColor);
+  border-left: 82px solid var(--mainColor);
+  top: -50px;
+  right: -137px;
+  z-index: -1;
+}
+
+@media (max-width: 991px) {
+  .about .about-content .image::after,
+  .about .about-content .image::before {
+    display: none;
+  }
+}
+
+.about .about-content .text {
+  flex-basis: calc(100% - 500px);
+}
+
+.about .about-content .text p:first-of-type {
+  font-weight: bold;
+  line-height: 2.2;
+  margin-bottom: 50px;
+}
+
+.about .about-content .text hr {
+  width: 50%;
+  background-color: var(--mainColor);
+  border: 2px solid var(--mainColor);
+  border-radius: 5px;
+}
+
+.about .about-content .text p:last-of-type {
+  line-height: 2;
+  color: var(--paragraphColor);
+  margin-top: 50px;
+}
+/* End About */
