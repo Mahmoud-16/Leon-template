@@ -10,8 +10,13 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --mainColor: #10cab7;
+  --secondaryColor: #2c4755;
   --sectionPadding: 60px;
   --sectionBackground: #f6f6f6;
   --paragraphColor: #777;
@@ -134,18 +139,15 @@ a {
   padding: 15px;
   border-bottom: 1px solid #ddd;
   transition-duration: 0.3s;
+  color: #333;
+  cursor: pointer;
 }
 
 .header ul li:hover {
   padding-left: 25px;
-}
-
-.header ul li a {
-  color: #333;
-}
-.header ul li a:hover {
   color: var(--mainColor);
 }
+
 /* End Header */
 /* Start Landing */
 .landing {
@@ -286,7 +288,7 @@ a {
   position: absolute;
   width: 100px;
   height: calc(100% + 100px);
-  background-color: #2c4755;
+  background-color: var(--secondaryColor);
   right: 0;
   top: -50px;
   z-index: -1;
@@ -447,3 +449,73 @@ a {
   margin-top: 50px;
 }
 /* End About */
+/* Start Contact */
+.contact {
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+  background-color: var(--sectionBackground);
+}
+
+.contact .info {
+  text-align: center;
+  padding-top: var(--sectionPadding);
+  padding-bottom: var(--sectionPadding);
+}
+
+.contact .info p:first-child {
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--secondaryColor);
+  letter-spacing: -2px;
+}
+
+.contact .info a {
+  display: block;
+  font-size: 35px;
+  font-weight: 800;
+  color: var(--mainColor);
+  padding-bottom: 20px;
+}
+
+.contact .social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact .social i {
+  margin-left: 10px;
+  color: var(--secondaryColor);
+  cursor: pointer;
+}
+
+.contact .social i:hover {
+  color: var(--mainColor);
+}
+
+@media (max-width: 767px) {
+  .contact .info {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .contact .info p:first-child,
+  .contact .info a {
+    font-size: 25px;
+  }
+}
+/* End Contact */
+/* Start Footer */
+.footer {
+  padding: 30px 10px;
+  background-color: var(--secondaryColor);
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.footer span {
+  color: var(--mainColor);
+  font-weight: bold;
+}
+/* End Footer */
