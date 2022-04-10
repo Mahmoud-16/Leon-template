@@ -47,35 +47,15 @@ btn.onclick = function () {
   });
 };
 
-// Scrolling to page sections
-document.addEventListener("click", function (e) {
-  // Checking wether a header link is clicked or not
-  if (e.target.classList.contains("header-link")) {
-    // Which link is clicked and scrolling its section
-    if (e.target.textContent === "Services") {
-      location.href = "/#services";
-    }
-    if (e.target.textContent === "Portfolio") {
-      location.href = "/#portfolio";
-    }
-    if (e.target.textContent === "About") {
-      location.href = "/#about";
-    }
-    if (e.target.textContent === "Contact") {
-      location.href = "/#contact";
-    }
-  }
-});
-
 // Opening social media pages
 document.addEventListener("click", function (e) {
   if (e.target.id === "yt") {
-    window.open("https://youtube.com")
+    window.open("https://youtube.com");
   }
   if (e.target.id === "fb") {
-    window.open("https://facebook.com")
+    window.open("https://facebook.com");
   }
   if (e.target.id === "tw") {
-    window.open("https://twitter.com")
+    window.open("https://twitter.com");
   }
-})
+});

@@ -136,22 +136,29 @@ a {
 }
 
 .header ul li {
-  padding: 15px;
   border-bottom: 1px solid #ddd;
-  transition-duration: 0.3s;
-  color: #333;
+  transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .header ul li:hover {
   padding-left: 25px;
-  color: var(--mainColor);
 }
 
+.header ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header ul li a:hover {
+  color: var(--mainColor);
+}
 /* End Header */
 /* Start Landing */
 .landing {
-  background-image: url(/images/landing.jpg);
+  background-image: url(../images/landing.jpg);
   background-size: cover;
   height: calc(100vh - 56px);
   position: relative;
